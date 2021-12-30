@@ -97,12 +97,12 @@ void getMaxDate(double& maxDate, int tempdata) {
 	if (tempdata > maxDate) { maxDate = tempdata; }
 }
 
-void userPrioritySet(userData& person, double maxMile, double maxDate, int tempdata) {
+void userPrioritySet(customerData& person, double maxMile, double maxDate, int tempdata) {
 	person.priority = person.order - (person.mile / maxMile) * 10 - (tempdata / maxDate) * 5;
 }
 
-void proritySort(userData* person, int dataLine) {
-	userData tempUser;
+void proritySort(customerData* person, int dataLine) {
+	customerData tempUser;
 	for (int i = 0; i < dataLine - 1; i++) {
 		for (int j = i; j < dataLine; j++) {
 			if (person[i].priority > person[j].priority) {
@@ -114,7 +114,7 @@ void proritySort(userData* person, int dataLine) {
 	}
 }
 
-void printResult(userData* person, int dataLine) {
+void printResult(customerData* person, int dataLine) {
 	ofstream fout("C:\\Users\\gkstk\\OneDrive\\πŸ≈¡ »≠∏È\\test1.txt");
 
 	cout << "No." << "\t" << "name" << "\t" << "mile" << "\t" << "signin" << "\t" << "priority" << "\r\n";

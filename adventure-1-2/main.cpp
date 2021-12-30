@@ -5,7 +5,7 @@ int main() {
 	char temp[100];
 	int dataLine = 0;
 
-	userData* person;
+	customerData* person;
 
 	double maxDate = 0, maxMile = 0;
 	int arySize = 0;
@@ -27,7 +27,7 @@ int main() {
 		}
 		fin.seekg(0, ios::beg);
 
-		userData* person = new userData[dataLine];
+		customerData* person = new customerData[dataLine];
 
 		nowTimeSet(nowTime);
 

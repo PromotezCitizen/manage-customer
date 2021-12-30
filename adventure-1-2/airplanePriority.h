@@ -13,7 +13,7 @@
 
 using namespace std;
 
-struct userData {
+struct customerData {
 	int order;
 	string name;
 	int mile;
@@ -22,7 +22,7 @@ struct userData {
 };
 
 struct chain {
-	userData data;
+	customerData data;
 	chain* left;
 	chain* right;
 };
@@ -42,8 +42,8 @@ void getUserTime(string& useDate, string& tempDateStr, ifstream& fin);
 void userTimeSet(time_t nowTime, time_t& userSigninTime, string tempDateStr, int& tempdata);
 void getMaxDate(double& maxDate, int tempdata);
 
-void userPrioritySet(userData& person, double maxMile, double maxDate, int tempdata);
+void userPrioritySet(customerData& person, double maxMile, double maxDate, int tempdata);
 
-void proritySort(userData* person, int dataLine);
+void proritySort(customerData* person, int dataLine);
 
-void printResult(userData* person, int dataLine);
+void printResult(customerData* person, int dataLine);
